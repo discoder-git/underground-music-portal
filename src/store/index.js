@@ -4,4 +4,10 @@ import * as firebase from 'firebase';
 
 Vue.use(Vuex)
 
-export const store = new Vuex.Store();
+import config from './modules/config'
+
+export const store = new Vuex.Store({
+    modules: {
+        config
+    }
+});
