@@ -242,7 +242,7 @@ label {
 /* START: General Blocks Layout */
 .wrapper {
     display: grid;
-    grid-template-columns: minmax(320px, 1024px);
+    grid-template-columns: minmax(320px, 1600px);
     justify-content: center;
 }
 
