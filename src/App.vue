@@ -1,17 +1,33 @@
 <template lang="html">
     <div id="app" class="wrapper">
-        <h1>{{ msg }}</h1>
+        <header class="header">
+            <div class="header__item">
+                Toggler
+            </div>
+            <div class="header__item">
+                <router-link to="/">
+                    <div class="logo">
+                        <span class="logo__inner">underground.zp.ua</span>
+                    </div>
+                </router-link>
+            </div>
+            <div class="header__item">
+                User
+            </div>
+        </header>
+        <main class="main" role="main">
+            Main
+        </main>
+        <footer class="footer">
+            Footer
+        </footer>
+        <!-- <div class="overlay"></div> -->
     </div>
 </template>
 
 <script>
 export default {
-    name: 'app',
-    computed: {
-        msg () {
-            return "underground.zp.ua"
-        }
-    }
+    name: 'app'
 }
 </script>
 
@@ -47,7 +63,7 @@ tbody, tfoot, thead, tr, th, td {
 /* START: General */
 html {
     height: 100%;
-    background: @colorBasicAir;
+    background: @colorPageBackground;
     box-sizing: border-box;
 }
 
@@ -240,13 +256,12 @@ label {
     grid-template-columns: 34px 1fr 34px;
     grid-column-gap: 20px;
     padding: 20px;
-    background: @colorBasicWhite;
-    border-bottom: 1px solid @colorBasicGrayLight;
-    box-shadow: 0px 0px 10px 0px @colorBasicBoxShadow;
+    background: @grayVeryDark;
+    border-bottom: 1px solid @grayDark;
 }
 
 .main {
-    background: @colorBasicWhite;
+    background: @grayVeryDark;
     padding: 80px;
     margin: 160px 0 0;
 }
@@ -255,8 +270,8 @@ label {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
-    background: #fff;
-    border-top: 1px solid @colorBasicGrayLight;
+    background: @grayVeryDark;
+    border-top: 1px solid @grayDark;
     padding: 20px 80px;
     margin: 0 0 80px;
 }
@@ -273,12 +288,6 @@ label {
     &__inner {
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
-        background: @colorBasicYellow;
-        text-shadow: 2px 2px 2px #fff;
-
-        &:hover {
-            background:@colorBasicYellowDark;
-        }
     }
 }
 
@@ -298,6 +307,14 @@ label {
             margin: 0;
         }
     }
+}
+
+.overlay {
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.8);
 }
 /* END: General Blocks Layout */
 /* START: Help classes */
