@@ -21,13 +21,23 @@
         <footer class="footer">
             Footer
         </footer>
-        <!-- <div class="overlay"></div> -->
+        <layout-overlay v-if="overlay"></layout-overlay>
     </div>
 </template>
 
 <script>
+import LayoutOverlay from './components/layout/layout-overlay.vue'
+
 export default {
-    name: 'app'
+    name: 'app',
+    computed: {
+        overlay () {
+            return this.$store.getters.overlay
+        }
+    },
+    components: {
+        LayoutOverlay
+    }
 }
 </script>
 
