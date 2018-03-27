@@ -21,12 +21,12 @@ export default new Router({
         },
         {
             path: '/music',
-            name: 'PageHome',
+            name: 'PageMusic',
             component: PageMusic
         },
         {
             path: '/parties',
-            name: 'PageHome',
+            name: 'PageParties',
             component: PageParties
         },
     ],
