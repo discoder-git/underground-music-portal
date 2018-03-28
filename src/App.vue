@@ -16,7 +16,7 @@
             </div>
         </header>
         <main class="main" role="main">
-            Main
+            <router-view></router-view>
         </main>
         <footer class="footer">
             Footer
@@ -83,7 +83,7 @@ html {
 
  body {
      height: 100%;
-     color: @colorBasicGray;
+     color: #f5f5f5;
      font-family: 'Average', serif;
      -webkit-text-size-adjust: 100%;
      -webkit-font-smoothing: antialiased;
@@ -93,10 +93,10 @@ html {
 }
 
 a {
-    color: @colorBasicBlue;
+    color: #7fdfff;
 
     &:hover {
-        color: @colorBasicBlueHover;
+        color: #60c4e5;
     }
 }
 
@@ -140,7 +140,7 @@ iframe {
 /* END: General */
 /* START: Typography */
 h1, h2, h3, h4, h5, h6 {
-    color: @colorBasicBlueDark;
+    color: #ccc;
     font-family: 'Open Sans', sans-serif;
 }
 
